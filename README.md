@@ -30,7 +30,7 @@ Note: it is important to mention that "change_m4a_to_flac.sh" localize the audio
 
 Note 2: In the folder configurations you can find the rest of configurations used during this project.
 
-Note 3: For this project a VAD was applied to all audios of each section to be used, this information was stored in numpy files for its start and end (in this repository is available in the folder data), and is mandatory to have one of this. If you don't want to use any VAD for training, please create this file and use as start 0 and as end the length of the audio. This VAD must match each line with the ones in train_speakers.txt, valid_speakers.txt and test_speakers.txt respectively.
+Note 3: For this project a VAD was applied to all audios of each section to be used, this information was stored in numpy files for its start and end (in this repository is available in the folder data), and it is mandatory to have one of this. If you don't want to use any VAD for training, please create this file and use as start 0 and as end the length of the audio. This VAD must match each line with the ones in train_speakers.txt, valid_speakers.txt and test_speakers.txt respectively.
 In this repository the VAD used is available in the folder data. However if you want to create this files you can run:
 
 python find_VAD.py list_of_audios.txt length
