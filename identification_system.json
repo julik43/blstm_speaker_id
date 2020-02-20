@@ -1,0 +1,24 @@
+
+{
+  "PATHS":{
+    "database":"database",
+    "path_weights":"SpecdB_0.5/29weights.ckpt"
+  },
+  "TRAINING": {
+    "architecture": "BLSTM5",
+    "channels":1,
+    "label":5000,
+    "restore_weights":"True",
+    "num_hidden":256,
+    "layers":3
+  },
+  "DATA_GENERATOR":{
+    "data_type":"SpecdB",
+    "window":0.5,
+    "sample_rate":16000,
+    "nperseg":0.032,
+    "noverlap":0.016,
+    "nfft":512,
+    "n_used":256
+  }
+}

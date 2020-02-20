@@ -1,0 +1,52 @@
+
+{
+  "PATHS":{
+    "directory_train":"dataset_train_1",
+    "directory_valid":"dataset_valid_1",
+    "directory_test":"dataset_test_1",
+    "file_train":"data/train_speakers.txt",
+    "file_valid":"data/train_speakers.txt",
+    "file_test":"data/train_speakers.txt",
+    "path_weights":"",
+    "data_vad_train_start":"data/data_vad_train_start.npy",
+    "data_vad_train_end":"data/data_vad_train_end.npy",
+    "data_vad_valid_start":"data/data_vad_train_start.npy",
+    "data_vad_valid_end":"data/data_vad_train_end.npy",
+    "data_vad_test_start":"data/data_vad_train_start.npy",
+    "data_vad_test_end":"data/data_vad_train_end.npy"
+  },
+  "TRAINING": {
+    "batch_size":100,
+    "num_epochs":30,
+    "learning_rate":0.0001,
+    "type_opt":"ADAM",
+    "architecture": "BLSTM5",
+    "pool_layers":5,
+    "channels":1,
+    "label":5000,
+    "restore_weights":"False",
+    "num_hidden":256,
+    "layers":3,
+    "d_vector":8192,
+    "output_keep_prob":0.9,
+    "margin":0.5,
+    "momentum": 0.99
+  },
+  "DATA_GENERATOR":{
+    "data_type":"SpecMag",
+    "window":0.25,
+    "sample_rate":16000,
+    "nperseg":0.032,
+    "noverlap":0.016,
+    "nfft":512,
+    "n_used":256,
+    "rounds_train":50,
+    "rounds_valid":1,
+    "rounds_test":1,
+    "num_train_files":20,
+    "num_valid_files":8,
+    "num_test_files":8,
+    "n_row_tf_record":1000,
+    "re_read":1
+  }
+}
